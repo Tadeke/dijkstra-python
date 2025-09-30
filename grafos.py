@@ -23,6 +23,8 @@ def carregar_grafo(arquivo, direcionado=False):
             if not linha.strip(): 
                 continue
             origem, destino, peso = linha.strip().split()
+            origem = origem.upper().strip()
+            destino = destino.upper().strip()
             peso = float(peso)
 
             if origem not in grafo:
